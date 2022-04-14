@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra tinh doi xung</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhap chuoi can kiem tra doi xung');
+
+    function checkDoiXung(n) {
+        let check = true
+        for (let i = 1; i < n.length; i++) {
+            if (n[i] !== n[n.length - 1 - i]) {
+                check = false;
+                break;
+            }
+        }
+        return check;
+    }
+
+    if (checkDoiXung(n)) {
+        alert('chuoi KHONG doi xung')
+    } else {
+        alert('chuoi doi xung')
+    }
+</script>
+
+</body>
+</html>
